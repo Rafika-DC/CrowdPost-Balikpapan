@@ -8,9 +8,9 @@ st.write("Situs rekomendasi lokasi tempat tinggal di daerah Balikpapan berdasark
 
 keramaian = st.selectbox("Suka lingkungan seperti apa?", ["Ramai", "Tenang"])
 transport = st.selectbox("Butuh akses ke transportasi umum?", ["Ya", "Tidak"])
-sekolah dasar = st.selectbox("Perlu dekat sekolah dasar?", ["Ya", "Tidak"])
-sekolah menengah pertama = st.selectbox("Perlu dekat sekolah menengah pertama?", ["Ya", "Tidak"])
-sekolah menengah atas/kejuruan = st.selectbox("Perlu dekat sekolah menengah atas/kejuruan?", ["Ya", "Tidak"])
+SD = st.selectbox("Perlu dekat SD?", ["Ya", "Tidak"])
+SMP = st.selectbox("Perlu dekat SMP?", ["Ya", "Tidak"])
+SMA/K = st.selectbox("Perlu dekat SMA/K?", ["Ya", "Tidak"])
 kampus = st.selectbox("Perlu dekat kampus?", ["Ya", "Tidak"])
 wisata alam = st.selectbox("Ingin dekat dengan wisata alam?", ["Ya", "Tidak"])
 
