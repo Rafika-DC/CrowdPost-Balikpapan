@@ -1,7 +1,7 @@
 
 import streamlit as st
 
-st.set_page_config(page_title="KodePos Pintar", layout="centered")
+st.set_page_config(page_title="CrowdPost Balikpapan", layout="centered")
 
 st.title("CrowdPost Balikpapan")
 st.write("Situs rekomendasi lokasi tempat tinggal di daerah Balikpapan berdasarkan gaya hidupmu.")
