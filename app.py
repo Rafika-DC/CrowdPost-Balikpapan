@@ -12,13 +12,16 @@ sekolah dasar = st.selectbox("Perlu dekat sekolah dasar?", ["Ya", "Tidak"])
 sekolah menengah pertama = st.selectbox("Perlu dekat sekolah menengah pertama?", ["Ya", "Tidak"])
 sekolah menengah atas/kejuruan = st.selectbox("Perlu dekat sekolah menengah atas/kejuruan?", ["Ya", "Tidak"])
 kampus = st.selectbox("Perlu dekat kampus?", ["Ya", "Tidak"])
-taman = st.selectbox("Suka aktivitas di taman?", ["Ya", "Tidak"])
+wisata alam = st.selectbox("Ingin dekat dengan wisata alam?", ["Ya", "Tidak"])
 
 data = [
-    {"kode": "76111", "nama": "Prapatan & Telaga Sari", "keramaian": "Ramai", "transport": "Ya", "SD": "Ya", "SMP": "Ya", "SMA/K": "Ya", "taman": "Ya"},
-    {"kode": "76132", "nama": "Kampung Baru Tengah", "keramaian": "Ramai", "transport": "Ya", "SD": "Ya", "SMP": "Ya", "SMA/K": "Ya", "taman": "Tidak"},
-    {"kode": "76124", "nama": "Sumber Rejo & Karang Rejo", "keramaian": "Ramai", "transport": "Ya", "SD": "Ya", "SMP": "Ya", "SMA/K": "Ya", "taman": "Ya"},
-    {"kode": "76131", "nama": "Manggar", "keramaian": "Ramai", "transport": "Ya", "SD": "Ya", "SMP": "Ya", "SMA/K": "Ya", "taman": "Ya"},
+    {"kode": "76111", "nama": "Prapatan & Telaga Sari", "keramaian": "Ramai", "transport": "Ya", "SD": "Ya", "SMP": "Ya", "SMA/K": "Ya", "kampus": "Tidak", "wisata alam": "Ya"},
+    {"kode": "76132", "nama": "Kampung Baru Tengah", "keramaian": "Ramai", "transport": "Ya", "SD": "Ya", "SMP": "Ya", "SMA/K": "Ya", "kampus": "Tidak", "wisata alam": "Tidak"},
+    {"kode": "76124", "nama": "Sumber Rejo & Karang Rejo", "keramaian": "Ramai", "transport": "Ya", "SD": "Ya", "SMP": "Ya", "SMA/K": "Ya", "kampus": "Tidak", "wisata alam": "Ya"},
+    {"kode": "76131", "nama": "Manggar", "keramaian": "Ramai", "transport": "Ya", "SD": "Ya", "SMP": "Ya", "SMA/K": "Ya", "kampus": "Tidak", "wisata alam": "Ya"},
+    {"kode": "76127", "nama": "Karang Joang", "keramaian": "Tenang", "transport": "Tidak", "SD": "Ya", "SMP": "Ya", "SMA/K": "Tidak", "kampus": "Ya", "wisata alam": "Ya"},
+    {"kode": "76125", "nama": "Gunung Samarinda", "keramaian": "Ramai", "transport": "Ya", "SD": "Ya", "SMP": "Ya", "SMA/K": "Ya", "kampus": "Tidak", "wisata alam": "Ya"},
+    {"kode": "76114", "nama": "Gunung Bahagia", "keramaian": "Ya", "transpot": "Ya", "SD": "Ya", "SMP": "Ya", "SMA/K": "Ya", "kampus": "Ya", "wisata alam": "Tidak"},
 ]
 
 if st.button("Cari Rekomendasi"):
@@ -28,8 +31,10 @@ if st.button("Cari Rekomendasi"):
         score = sum([
             area["keramaian"] == keramaian,
             area["transport"] == transport,
-            area["sekolah"] == sekolah,
-            area["taman"] == taman
+            area["SD"] == SD,
+            area["SMP"] == SMP,
+            area["SMA/K"] == SMA/K,
+            area["wisata alam"] == wisata alam
         ])
         if score > best_score:
             best_score = score
@@ -37,7 +42,8 @@ if st.button("Cari Rekomendasi"):
 
     if best_match:
         st.success(f"Rekomendasi: {best_match['nama']} (Kode Pos: {best_match['kode']})")
-        st.write(f"Karakteristik: {best_match['keramaian']}, Transport: {best_match['transport']}, "
-                 f"Sekolah: {best_match['sekolah']}, Taman: {best_match['taman']}")
+        st.write(f"Keramaian: {best_match['keramaian']}, Transportasi: {best_match['transport']}, "
+                 f"SD: {best_match['SD']}, SMP:{best_match['SMP']}, SMP: {best_match['SMP']}, "
+                 f"SMA/K: {best_match['SMA/K']}, Kampus: {best_match['kampus']}, Taman: {best_match['taman']}")
     else:
         st.warning("Tidak ditemukan lokasi yang cocok.")
