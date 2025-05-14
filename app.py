@@ -3,18 +3,22 @@ import streamlit as st
 
 st.set_page_config(page_title="KodePos Pintar", layout="centered")
 
-st.title("KodePos Pintar")
-st.write("Sistem rekomendasi lokasi tempat tinggal berdasarkan gaya hidupmu.")
+st.title("CrowdPost Balikpapan")
+st.write("Situs rekomendasi lokasi tempat tinggal di daerah Balikpapan berdasarkan gaya hidupmu.")
 
 keramaian = st.selectbox("Suka lingkungan seperti apa?", ["Ramai", "Tenang"])
 transport = st.selectbox("Butuh akses ke transportasi umum?", ["Ya", "Tidak"])
-sekolah = st.selectbox("Perlu dekat sekolah/kampus?", ["Ya", "Tidak"])
+sekolah dasar = st.selectbox("Perlu dekat sekolah dasar?", ["Ya", "Tidak"])
+sekolah menengah pertama = st.selectbox("Perlu dekat sekolah menengah pertama?", ["Ya", "Tidak"])
+sekolah menengah atas/kejuruan = st.selectbox("Perlu dekat sekolah menengah atas/kejuruan?", ["Ya", "Tidak"])
+kampus = st.selectbox("Perlu dekat kampus?", ["Ya", "Tidak"])
 taman = st.selectbox("Suka aktivitas di taman?", ["Ya", "Tidak"])
 
 data = [
-    {"kode": "76111", "nama": "Prapatan & Telaga Sari", "keramaian": "Ramai", "transport": "Ya", "sekolah": "Ya", "taman": "Ya"},
-    {"kode": "67890", "nama": "Daerah B", "keramaian": "Tenang", "transport": "Tidak", "sekolah": "Ya", "taman": "Ya"},
-    {"kode": "54321", "nama": "Daerah C", "keramaian": "Tenang", "transport": "Ya", "sekolah": "Tidak", "taman": "Ya"},
+    {"kode": "76111", "nama": "Prapatan & Telaga Sari", "keramaian": "Ramai", "transport": "Ya", "SD": "Ya", "SMP": "Ya", "SMA/K": "Ya", "taman": "Ya"},
+    {"kode": "76132", "nama": "Kampung Baru Tengah", "keramaian": "Ramai", "transport": "Ya", "SD": "Ya", "SMP": "Ya", "SMA/K": "Ya", "taman": "Tidak"},
+    {"kode": "76124", "nama": "Sumber Rejo & Karang Rejo", "keramaian": "Ramai", "transport": "Ya", "SD": "Ya", "SMP": "Ya", "SMA/K": "Ya", "taman": "Ya"},
+    {"kode": "76131", "nama": "Manggar", "keramaian": "Ramai", "transport": "Ya", "SD": "Ya", "SMP": "Ya", "SMA/K": "Ya", "taman": "Ya"},
 ]
 
 if st.button("Cari Rekomendasi"):
