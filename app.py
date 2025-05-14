@@ -10,7 +10,7 @@ keramaian = st.selectbox("Suka lingkungan seperti apa?", ["Ramai", "Tenang"])
 transport = st.selectbox("Butuh akses ke transportasi umum?", ["Ya", "Tidak"])
 sd = st.selectbox("Perlu dekat SD?", ["Ya", "Tidak"])
 smp = st.selectbox("Perlu dekat SMP?", ["Ya", "Tidak"])
-sma/k = st.selectbox("Perlu dekat SMA/K?", ["Ya", "Tidak"])
+sma atau smk = st.selectbox("Perlu dekat SMA atau SMK?", ["Ya", "Tidak"])
 kampus = st.selectbox("Perlu dekat kampus?", ["Ya", "Tidak"])
 wisata alam = st.selectbox("Ingin dekat dengan wisata alam?", ["Ya", "Tidak"])
 
@@ -32,8 +32,8 @@ if st.button("Cari Rekomendasi"):
             area["keramaian"] == keramaian,
             area["transport"] == transport,
             area["SD"] == sd,
-            area["SMP"] == SMP,
-            area["SMA/K"] == SMA/K,
+            area["SMP"] == smp,
+            area["SMA/K"] == sma atau smk,
             area["kampus"] == kampus,
             area["wisata alam"] == wisata alam
         ])
