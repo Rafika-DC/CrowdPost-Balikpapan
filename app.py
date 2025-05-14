@@ -12,7 +12,7 @@ sd = st.selectbox("Perlu dekat SD?", ["Ya", "Tidak"])
 smp = st.selectbox("Perlu dekat SMP?", ["Ya", "Tidak"])
 sma_atau_smk = st.selectbox("Perlu dekat SMA atau SMK?", ["Ya", "Tidak"])
 kampus = st.selectbox("Perlu dekat kampus?", ["Ya", "Tidak"])
-wisata alam = st.selectbox("Ingin dekat dengan wisata alam?", ["Ya", "Tidak"])
+wisata_alam = st.selectbox("Ingin dekat dengan wisata alam?", ["Ya", "Tidak"])
 
 data = [
     {"kode": "76111", "nama": "Prapatan & Telaga Sari", "keramaian": "Ramai", "transport": "Ya", "SD": "Ya", "SMP": "Ya", "SMA/K": "Ya", "kampus": "Tidak", "wisata alam": "Ya"},
@@ -35,7 +35,7 @@ if st.button("Cari Rekomendasi"):
             area["SMP"] == smp,
             area["SMA/K"] == sma_atau_smk,
             area["kampus"] == kampus,
-            area["wisata alam"] == wisata alam
+            area["wisata alam"] == wisata_alam
         ])
         if score > best_score:
             best_score = score
