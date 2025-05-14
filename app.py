@@ -8,9 +8,9 @@ st.write("Situs rekomendasi lokasi tempat tinggal di daerah Balikpapan berdasark
 
 keramaian = st.selectbox("Suka lingkungan seperti apa?", ["Ramai", "Tenang"])
 transport = st.selectbox("Butuh akses ke transportasi umum?", ["Ya", "Tidak"])
-SD = st.selectbox("Perlu dekat SD?", ["Ya", "Tidak"])
-SMP = st.selectbox("Perlu dekat SMP?", ["Ya", "Tidak"])
-SMA/K = st.selectbox("Perlu dekat SMA/K?", ["Ya", "Tidak"])
+sd = st.selectbox("Perlu dekat SD?", ["Ya", "Tidak"])
+smp = st.selectbox("Perlu dekat SMP?", ["Ya", "Tidak"])
+sma/k = st.selectbox("Perlu dekat SMA/K?", ["Ya", "Tidak"])
 kampus = st.selectbox("Perlu dekat kampus?", ["Ya", "Tidak"])
 wisata alam = st.selectbox("Ingin dekat dengan wisata alam?", ["Ya", "Tidak"])
 
@@ -31,7 +31,7 @@ if st.button("Cari Rekomendasi"):
         score = sum([
             area["keramaian"] == keramaian,
             area["transport"] == transport,
-            area["SD"] == SD,
+            area["SD"] == sd,
             area["SMP"] == SMP,
             area["SMA/K"] == SMA/K,
             area["kampus"] == kampus,
