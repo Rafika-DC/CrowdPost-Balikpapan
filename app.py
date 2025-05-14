@@ -34,6 +34,7 @@ if st.button("Cari Rekomendasi"):
             area["SD"] == SD,
             area["SMP"] == SMP,
             area["SMA/K"] == SMA/K,
+            area["kampus"] == kampus,
             area["wisata alam"] == wisata alam
         ])
         if score > best_score:
