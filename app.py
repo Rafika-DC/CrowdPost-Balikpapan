@@ -21,7 +21,7 @@ data = [
     {"kode": "76131", "nama": "Manggar", "keramaian": "Ramai", "transport": "Ya", "SD": "Ya", "SMP": "Ya", "SMA/K": "Ya", "kampus": "Tidak", "wisata alam": "Ya"},
     {"kode": "76127", "nama": "Karang Joang", "keramaian": "Tenang", "transport": "Tidak", "SD": "Ya", "SMP": "Ya", "SMA/K": "Tidak", "kampus": "Ya", "wisata alam": "Ya"},
     {"kode": "76125", "nama": "Gunung Samarinda", "keramaian": "Ramai", "transport": "Ya", "SD": "Ya", "SMP": "Ya", "SMA/K": "Ya", "kampus": "Tidak", "wisata alam": "Ya"},
-    {"kode": "76114", "nama": "Gunung Bahagia", "keramaian": "Ya", "transpot": "Ya", "SD": "Ya", "SMP": "Ya", "SMA/K": "Ya", "kampus": "Ya", "wisata alam": "Tidak"},
+    {"kode": "76114", "nama": "Gunung Bahagia", "keramaian": "Ya", "transport": "Ya", "SD": "Ya", "SMP": "Ya", "SMA/K": "Ya", "kampus": "Ya", "wisata alam": "Tidak"},
 ]
 
 if st.button("Cari Rekomendasi"):
