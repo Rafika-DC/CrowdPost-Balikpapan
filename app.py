@@ -44,7 +44,7 @@ if st.button("Cari Rekomendasi"):
     if best_match:
         st.success(f"Rekomendasi: {best_match['nama']} (Kode Pos: {best_match['kode']})")
         st.write(f"Keramaian: {best_match['keramaian']}, Transportasi: {best_match['transport']}, "
-                 f"SD: {best_match['SD']}, SMP:{best_match['SMP']}, SMP: {best_match['SMP']}, "
+                 f"SD: {best_match['SD']}, SMP: {best_match['SMP']}, "
                  f"SMA/K: {best_match['SMA/K']}, Kampus: {best_match['kampus']}, Wisata alam: {best_match['wisata alam']}")
     else:
         st.warning("Tidak ditemukan lokasi yang cocok.")
